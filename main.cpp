@@ -3,38 +3,38 @@
 int main()
 {
     int low = 0, high = N - 1;
-    int arry[N];
+    int arr[N];
     for (int i = 0; i < N; i++)
     {
-        arry[i] = N - i - 1;
+        arr[i] = N - i - 1;
     }
     cout << "before: ";
-    Show(arry);
+    Show(arr);
 
-    // QuickSortTest(arry, low, high);
-    // BubbleSortTest(arry);
-    MergeSortTest(arry, N);
+    // QuickSortTest(arr, low, high);
+    // BubbleSortTest(arr);
+    MergeSortTest(arr, N);
 
     cout << "after:  ";
-    Show(arry);
+    Show(arr);
 
     return 0;
 }
 
-int QuickSortTest(int arry[], int low, int high)
+int QuickSortTest(int arr[], int low, int high)
 {
-    QuickSort(arry, low, high);
+    QuickSort(arr, low, high);
     return 0;
 }
 
-int BubbleSortTest(int arry[])
+int BubbleSortTest(int arr[])
 {
-    BubbleSort(arry);
+    BubbleSort(arr);
     return 0;
 }
 
-int MergeSortTest(int arry[], int len)
+int MergeSortTest(int arr[], int len)
 {
-    MergeSort(arry, len);
+    MergeSort(arr, len);
     return 0;
 }

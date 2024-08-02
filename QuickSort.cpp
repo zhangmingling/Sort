@@ -1,31 +1,31 @@
 #include "public.hpp"
 
-int Paritition(int arry[], int low, int high)
+int Paritition(int arr[], int low, int high)
 {
-    int pivot = arry[low];
+    int pivot = arr[low];
     while (low < high)
     {
-        if (arry[high] >= pivot)
+        if (arr[high] >= pivot)
         {
             --high;
         }
-        arry[low] = arry[high];
-        if (arry[low] <= pivot)
+        arr[low] = arr[high];
+        if (arr[low] <= pivot)
         {
             ++low;
         }
-        arry[high] = arry[low];
+        arr[high] = arr[low];
     }
-    arry[low] = pivot;
+    arr[low] = pivot;
     return low;
 }
 
-void QuickSort(int arry[], int low, int high)
+void QuickSort(int arr[], int low, int high)
 {
     if (low < high)
     {
-        int pivot = Paritition(arry, low, high);
-        QuickSort(arry, low, pivot - 1);
-        QuickSort(arry, pivot + 1, high);
+        int pivot = Paritition(arr, low, high);
+        QuickSort(arr, low, pivot - 1);
+        QuickSort(arr, pivot + 1, high);
     }
 }
